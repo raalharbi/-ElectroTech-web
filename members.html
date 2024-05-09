@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<head>
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.2.0/fonts/remixicon.css" rel="stylesheet" />
+    <link rel="stylesheet" href="css/styles.css" />
+    <title>ElectroTech</title>
+    <style>
+        h5 {
+            color: gray;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="header__bar">Free Shipping on Orders Over 300 SR</div>
+    <nav class="section__container nav__container">
+      <a href="#" class="nav__logo">ElectroTech</a>
+      <ul class="nav__links">
+        <li class="link"><a href="index.html">HOME</a></li>
+        <li class="link"><a href="news.html">NEWS</a></li>
+        <li class="link"><a href="product.html">PRODUCT</a></li>
+        <li class="link"><a href="members.html">MEMBERS</a></li>
+        <li class="link"><a href="contactus.html">CONTACT US</a></li>
+      </ul>
+      <div class="nav__icons">
+        <span><i class="ri-user-line"></i></span>
+        <span><i class="ri-search-line"></i></span>
+        <span><i class="ri-shopping-bag-line"></i></span>
+      </div>
+    </nav>
+    <section class="news">
+        <div class="section__container news__container">
+            <h2 class="section__title">Members</h2>
+            <div class="news__grid" id="member-list">
+                <div class="news__card">
+                    <div class="news__details">
+                        <h4>Sarah Zaben Alfaqeer</h4>
+                        <h5> Computer Scince </h5>
+                        <hr />
+                        <p>
+                            Skilled in utilizing programming languages and tools to extract, clean, and analyze data to
+                            drive informed business decisions. </p>
+                    </div>
+                </div>
+                <div class="news__card">
+                    <div class="news__details">
+                        <h4>Alanoud Saleh Alattar</h4>
+                        <h5> Computer Scince </h5>
+                        <hr />
+                        <p>
+                            Proficient in various programming languages and frameworks, with a strong focus on creating
+                            efficient and user-friendly solutions.
+                        </p>
+                    </div>
+                </div>
+                <div class="news__card">
+                    <div class="news__details">
+                        <h4>Abrar abdulrhman alshehri</h4>
+                        <h5> Computer Scince </h5>
+                        <hr />
+                        <p>
+                            Proficient in HTML, CSS, and JavaScript, with a strong focus on creating visually stunning
+                            and responsive websites.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <hr />
+    <div class="section__container footer__bar">
+        <div id="copyright">
+            Copyright © 2024 All rights reserved.
+        </div>
+
+
+    </div>
+</body>
+<script>
+    var memberListContainer = document.getElementById("member-list");
+    var memberList = memberListContainer.getElementsByClassName("news__card");
+    var memberListArray = Array.from(memberList);
+    function shuffleArray(array) {
+        for (var i = array.length - 1; i > 0; i--) {
+            var j = Math.floor(Math.random() * (i + 1));
+            var temp = array[i];
+            array[i] = array[j];
+            array[j] = temp;
+        }
+        return array;
+    }
+    var shuffledList = shuffleArray(memberListArray);
+    memberListContainer.innerHTML = "";
+    shuffledList.forEach(function (item) {
+        memberListContainer.appendChild(item);
+    });
+</script>
+
+</html>
